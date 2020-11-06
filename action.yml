@@ -1,0 +1,19 @@
+name: 'Terraform Action'
+description: 'This is for terraform'
+# inputs:
+#   terraform-working-directory:
+#     description: 'The working directory of the Terraform to deploy'
+#     required: true
+#     default: 'terraform'
+runs:
+  using: 'composite'
+  steps:
+    - uses: Brightspace/third-party-actions@hashicorp/setup-terraform
+      with:
+        terraform_version: 0.12.6
+        terraform_wrapper: false
+    - run: terraform init
+      shell: bash
+    - run: terraform plan 
+      shell: bash
+
