@@ -1,7 +1,7 @@
 name: 'Terraform Action'
 description: 'This is for terraform'
 inputs:
-  terraform-directory:
+  terraform_directory:
     description: 'The working directory of the Terraform to deploy'
     required: true
     default: 'terraform'
