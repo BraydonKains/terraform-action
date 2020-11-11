@@ -10,11 +10,11 @@ runs:
   steps:
     - run: ls
       shell: bash
-      working-directory: ${{ inputs.terraform-directory }}
+      working-directory: ./${{ inputs.terraform-directory }}
     - run: terraform init
       shell: bash
-      working-directory: ${{ inputs.terraform-directory }}
+      working-directory: ./${{ inputs.terraform-directory }}
     - run: terraform plan 
       shell: bash
-      working-directory: ${{ inputs.terraform-directory }}
+      working-directory: ./${{ inputs.terraform-directory }}
 
